@@ -1,0 +1,74 @@
+body {
+  background-image: url("../img/infocom-logo.png"); /* Adjust the path if necessary */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.time-in {
+  background-color: #28a745;
+  color: white;
+}
+
+.time-out {
+  background-color: #ffc107;
+  color: black;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+}
