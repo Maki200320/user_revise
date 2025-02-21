@@ -72,3 +72,8 @@ input {
 .styled-table th {
   background-color: #f4f4f4;
 }
+span{
+  color: rgb(51, 180, 51);
+  font-weight: bold;
+  font-style: italic;
+}

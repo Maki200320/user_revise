@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "./firebase";
-import { collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs, updateDoc, doc} from "firebase/firestore";
 import "./styles.css";
 
 const EmployeeTimeTracker = () => {
@@ -40,10 +40,6 @@ const EmployeeTimeTracker = () => {
     setEmployees(employees.map(emp => emp.id === id ? { ...emp, timeOut: new Date().toLocaleTimeString() } : emp));
   };
 
-  const handleDelete = async (id) => {
-    await deleteDoc(doc(db, "employees", id));
-    setEmployees(employees.filter(emp => emp.id !== id));
-  };
 
   return (
     <div className="container">
@@ -75,8 +71,9 @@ const EmployeeTimeTracker = () => {
               <td>{emp.timeIn}</td>
               <td>{emp.timeOut || "-"}</td>
               <td>
-                {!emp.timeOut && <button onClick={() => handleTimeOut(emp.id)} className="btn time-out">Time Out</button>}
-                <button onClick={() => handleDelete(emp.id)} className="btn delete">Delete</button>
+                { emp.timeOut ? (
+                  <span>Punched Out</span>
+                ) : !emp.timeOut && <button onClick={() => handleTimeOut(emp.id)} className="btn time-out">Punch Out</button>}
               </td>
             </tr>
           ))}
